@@ -3,6 +3,8 @@ sublime-waxeye
 
 Waxeye syntax highlighter for Sublime Text
 
+Tested with Sublime Text 2 and 3. It should fine work for good old Textmate too.
+
 Waxeye
 ------
 
