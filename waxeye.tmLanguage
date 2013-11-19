@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>fileTypes</key>
+	<array>
+		<string>waxeye</string>
+	</array>
+
+	<key>keyEquivalent</key>
+	<string>^~P</string>
+
+	<key>name</key>
+	<string>Waxeye</string>
+
+	<key>patterns</key>
+	<array>
+
+		<!-- 4.1 non-terminals -->
+		<dict>
+			<key>comment</key>
+			<string>name</string>
+			<key>match</key>
+			<string>[a-zA-Z]*[a-zA-Z0-9_-]</string>
+			<key>name</key>
+			<string>variable.other.global.waxeye</string>
+		</dict>
+
+		<dict>
+			<key>comment</key>
+			<string>tree constructing non-terminal</string>
+			<key>match</key>
+			<string>&lt;-</string>
+			<key>name</key>
+			<string>keyword.operator.assignment.waxeye</string>
+		</dict>
+
+		<dict>
+			<key>comment</key>
+			<string>non-tree constructing non-terminal</string>
+			<key>match</key>
+			<string>&lt;:</string>
+			<key>name</key>
+			<string>keyword.operator.assignment.waxeye</string>
+		</dict>
+
+		<!-- 4.2 expressions -->
+
+		<!-- 4.2.1 atomic expressions -->
+		<dict>
+			<key>comment</key>
+			<string>wildcard</string>
+			<key>match</key>
+			<string>\.</string>
+			<key>name</key>
+			<string>keyword.operator.wildcard.waxeye</string>
+		</dict>
+
+		<dict>
+			<key>comment</key>
+			<string>literal</string>
+			<key>begin</key>
+			<string>\'</string>
+			<key>end</key>
+			<string>\'</string>
+			<key>name</key>
+			<string>string.quoted.single.waxeye</string>
+		</dict>
+
+		<dict>
+			<key>comment</key>
+			<string>case-insensitive literal</string>
+			<key>begin</key>
+			<string>\"</string>
+			<key>end</key>
+			<string>\"</string>
+			<key>name</key>
+			<string>string.quoted.double.waxeye</string>
+		</dict>
+
+		<dict>
+			<key>comment</key>
+			<string>character class</string>
+			<key>begin</key>
+			<string>\[</string>
+			<key>end</key>
+			<string>\]</string>
+			<key>name</key>
+			<string>keyword.control.character-class.waxeye</string>
+		</dict>
+
+		<dict>
+			<key>comment</key>
+			<string>non-terminal</string>
+			<key>match</key>
+			<string>[A-Z]+</string>
+			<key>name</key>
+			<string>variable.other.constant.waxeye</string>
+		</dict>
+
+		<!-- 4.2.2 prefix expressions -->
+		<dict>
+			<key>comment</key>
+			<string>prefix expressions</string>
+			<key>match</key>
+			<string>\(|\)|\:|\*|\+|\?|\!|\&amp;|\|</string>
+			<key>name</key>
+			<string>keyword.operator.waxeye</string>
+		</dict>
+
+		<!-- 4.4 pruning non-terminal -->
+		<dict>
+			<key>comment</key>
+			<string>pruning non-terminal</string>
+			<key>match</key>
+			<string>&lt;\=</string>
+			<key>name</key>
+			<string>keyword.operator.assignment.waxeye</string>
+		</dict>
+
+		<!-- 4.5 comments -->
+		<dict>
+			<key>match</key>
+			<string>(#).*$\n?</string>
+			<key>name</key>
+			<string>comment.line.number-sign.waxeye</string>
+		</dict>
+
+		<dict>
+			<key>comment</key>
+			<string>case-insensitive literal</string>
+			<key>begin</key>
+			<string>\/\*</string>
+			<key>end</key>
+			<string>\*\/</string>
+			<key>name</key>
+			<string>comment.block.waxeye</string>
+		</dict>
+
+	</array>
+
+	<key>scopeName</key>
+	<string>source.waxeye</string>
+
+	<key>uuid</key>
+	<string>5777e7fa-537b-4c2a-a588-40e3e8bb6f98</string>
+</dict>
+</plist>
