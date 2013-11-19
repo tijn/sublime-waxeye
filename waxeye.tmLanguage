@@ -119,16 +119,19 @@
 		</dict>
 
 		<!-- 4.5 comments -->
-		<dict>
+                <dict>
+                        <key>comment</key>
+                        <string>single-line comment</string>
 			<key>match</key>
 			<string>(#).*$\n?</string>
 			<key>name</key>
 			<string>comment.line.number-sign.waxeye</string>
 		</dict>
 
-		<dict>
+                <!-- FIXME: the multiline comment should be more greedy -->
+                <dict>
 			<key>comment</key>
-			<string>case-insensitive literal</string>
+			<string>multi-line comment</string>
 			<key>begin</key>
 			<string>\/\*</string>
 			<key>end</key>
