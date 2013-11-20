@@ -2,150 +2,150 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>fileTypes</key>
-	<array>
-		<string>waxeye</string>
-	</array>
+  <key>fileTypes</key>
+  <array>
+    <string>waxeye</string>
+  </array>
 
-	<key>keyEquivalent</key>
-	<string>^~P</string>
+  <key>keyEquivalent</key>
+  <string>^~P</string>
 
-	<key>name</key>
-	<string>Waxeye</string>
+  <key>name</key>
+  <string>Waxeye</string>
 
-	<key>patterns</key>
-	<array>
+  <key>patterns</key>
+  <array>
 
-		<!-- for the source of the references, see http://waxeye.org/manual.html -->
-		<!-- 4.1 non-terminals -->
-		<dict>
-			<key>comment</key>
-			<string>non-terminal</string>
-			<key>match</key>
-			<string>[a-zA-Z][a-zA-Z0-9_-]*</string>
-			<key>name</key>
-			<string>variable.other.global.waxeye</string>
-		</dict>
+    <!-- for the source of the references, see http://waxeye.org/manual.html -->
+    <!-- 4.1 non-terminals -->
+    <dict>
+      <key>comment</key>
+      <string>non-terminal</string>
+      <key>match</key>
+      <string>[a-zA-Z][a-zA-Z0-9_-]*</string>
+      <key>name</key>
+      <string>variable.other.global.waxeye</string>
+    </dict>
 
-		<!-- TODO: it would be cool if I could change the color of the name of the NT according to the assignment operator after it. And then keep the same color for that thing throughout the whole grammar file. I don't think a simple context free highlighter can do this though -->
+    <!-- TODO: it would be cool if I could change the color of the name of the NT according to the assignment operator after it. And then keep the same color for that thing throughout the whole grammar file. I don't think a simple context free highlighter can do this though -->
 
-		<!-- 4.1 non-terminals -->
-		<dict>
-			<key>comment</key>
-			<string>tree constructing non-terminal assignment</string>
-			<key>match</key>
-			<string>&lt;-</string>
-			<key>name</key>
-			<string>keyword.operator.assignment.waxeye</string>
-		</dict>
+    <!-- 4.1 non-terminals -->
+    <dict>
+      <key>comment</key>
+      <string>tree constructing non-terminal assignment</string>
+      <key>match</key>
+      <string>&lt;-</string>
+      <key>name</key>
+      <string>keyword.operator.assignment.waxeye</string>
+    </dict>
 
-		<!-- 4.1 non-terminals -->
-		<dict>
-			<key>comment</key>
-			<string>void non-terminal assignment</string>
-			<key>match</key>
-			<string>&lt;:</string>
-			<key>name</key>
-			<string>keyword.operator.assignment.waxeye</string>
-		</dict>
+    <!-- 4.1 non-terminals -->
+    <dict>
+      <key>comment</key>
+      <string>void non-terminal assignment</string>
+      <key>match</key>
+      <string>&lt;:</string>
+      <key>name</key>
+      <string>keyword.operator.assignment.waxeye</string>
+    </dict>
 
-		<!-- 4.4 pruning non-terminal -->
-		<dict>
-			<key>comment</key>
-			<string>pruning non-terminal assignment</string>
-			<key>match</key>
-			<string>&lt;=</string>
-			<key>name</key>
-			<string>keyword.operator.assignment.waxeye</string>
-		</dict>
+    <!-- 4.4 pruning non-terminal -->
+    <dict>
+      <key>comment</key>
+      <string>pruning non-terminal assignment</string>
+      <key>match</key>
+      <string>&lt;=</string>
+      <key>name</key>
+      <string>keyword.operator.assignment.waxeye</string>
+    </dict>
 
-		<!-- 4.2 expressions -->
+    <!-- 4.2 expressions -->
 
-		<!-- 4.2.1 atomic expressions - wildcard -->
-		<dict>
-			<key>comment</key>
-			<string>wildcard</string>
-			<key>match</key>
-			<string>\.</string>
-			<key>name</key>
-			<string>keyword.operator.wildcard.waxeye</string>
-		</dict>
+    <!-- 4.2.1 atomic expressions - wildcard -->
+    <dict>
+      <key>comment</key>
+      <string>wildcard</string>
+      <key>match</key>
+      <string>\.</string>
+      <key>name</key>
+      <string>keyword.operator.wildcard.waxeye</string>
+    </dict>
 
-		<!-- 4.2.1 atomic expressions - literal -->
-		<dict>
-			<key>comment</key>
-			<string>literal</string>
-			<key>begin</key>
-			<string>\'</string>
-			<key>end</key>
-			<string>\'</string>
-			<key>name</key>
-			<string>string.quoted.single.waxeye</string>
-		</dict>
+    <!-- 4.2.1 atomic expressions - literal -->
+    <dict>
+      <key>comment</key>
+      <string>literal</string>
+      <key>begin</key>
+      <string>\'</string>
+      <key>end</key>
+      <string>\'</string>
+      <key>name</key>
+      <string>string.quoted.single.waxeye</string>
+    </dict>
 
-		<!-- 4.2.1 atomic expressions - case-insensitive literal -->
-		<dict>
-			<key>comment</key>
-			<string>case-insensitive literal</string>
-			<key>begin</key>
-			<string>\"</string>
-			<key>end</key>
-			<string>\"</string>
-			<key>name</key>
-			<string>string.quoted.double.waxeye</string>
-		</dict>
+    <!-- 4.2.1 atomic expressions - case-insensitive literal -->
+    <dict>
+      <key>comment</key>
+      <string>case-insensitive literal</string>
+      <key>begin</key>
+      <string>\"</string>
+      <key>end</key>
+      <string>\"</string>
+      <key>name</key>
+      <string>string.quoted.double.waxeye</string>
+    </dict>
 
-		<!-- 4.2.1 atomic expressions - character class -->
-		<dict>
-			<key>comment</key>
-			<string>character class</string>
-			<key>begin</key>
-			<string>\[</string>
-			<key>end</key>
-			<string>\]</string>
-			<key>name</key>
-			<string>keyword.control.character-class.waxeye</string>
-		</dict>
+    <!-- 4.2.1 atomic expressions - character class -->
+    <dict>
+      <key>comment</key>
+      <string>character class</string>
+      <key>begin</key>
+      <string>\[</string>
+      <key>end</key>
+      <string>\]</string>
+      <key>name</key>
+      <string>keyword.control.character-class.waxeye</string>
+    </dict>
 
-		<!-- 4.2.2 prefix expressions -->
-		<dict>
-			<key>comment</key>
-			<string>prefix expressions</string>
-			<key>match</key>
-			<string>\(|\)|\:|\*|\+|\?|\!|\&amp;|\|</string>
-			<key>name</key>
-			<string>keyword.operator.waxeye</string>
-		</dict>
+    <!-- 4.2.2 prefix expressions -->
+    <dict>
+      <key>comment</key>
+      <string>prefix expressions</string>
+      <key>match</key>
+      <string>\(|\)|\:|\*|\+|\?|\!|\&amp;|\|</string>
+      <key>name</key>
+      <string>keyword.operator.waxeye</string>
+    </dict>
 
-		<!-- 4.5.1 single line comments -->
+    <!-- 4.5.1 single line comments -->
     <dict>
       <key>comment</key>
       <string>single-line comment</string>
-			<key>match</key>
-			<string>(#).*$\n?</string>
-			<key>name</key>
-			<string>comment.line.number-sign.waxeye</string>
-		</dict>
+      <key>match</key>
+      <string>(#).*$\n?</string>
+      <key>name</key>
+      <string>comment.line.number-sign.waxeye</string>
+    </dict>
 
-		<!-- 4.5.2 multi line comments -->
+    <!-- 4.5.2 multi line comments -->
     <!-- FIXME: the multiline comment should be more greedy -->
     <dict>
-			<key>comment</key>
-			<string>multi-line comment</string>
-			<key>begin</key>
-			<string>\/\*</string>
-			<key>end</key>
-			<string>\*\/</string>
-			<key>name</key>
-			<string>comment.block.waxeye</string>
-		</dict>
+      <key>comment</key>
+      <string>multi-line comment</string>
+      <key>begin</key>
+      <string>\/\*</string>
+      <key>end</key>
+      <string>\*\/</string>
+      <key>name</key>
+      <string>comment.block.waxeye</string>
+    </dict>
 
-	</array>
+  </array>
 
-	<key>scopeName</key>
-	<string>source.waxeye</string>
+  <key>scopeName</key>
+  <string>source.waxeye</string>
 
-	<key>uuid</key>
-	<string>5777e7fa-537b-4c2a-a588-40e3e8bb6f98</string>
+  <key>uuid</key>
+  <string>5777e7fa-537b-4c2a-a588-40e3e8bb6f98</string>
 </dict>
 </plist>
