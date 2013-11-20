@@ -16,6 +16,7 @@
 	<key>patterns</key>
 	<array>
 
+		<!-- for the source of the references, see http://waxeye.org/manual.html -->
 		<!-- 4.1 non-terminals -->
 		<dict>
 			<key>comment</key>
@@ -26,27 +27,41 @@
 			<string>variable.other.global.waxeye</string>
 		</dict>
 
+		<!-- TODO: it would be cool if I could change the color of the name of the NT according to the assignment operator after it. And then keep the same color for that thing throughout the whole grammar file. I don't think a simple context free highlighter can do this though -->
+
+		<!-- 4.1 non-terminals -->
 		<dict>
 			<key>comment</key>
-			<string>tree constructing non-terminal</string>
+			<string>tree constructing non-terminal assignment</string>
 			<key>match</key>
 			<string>&lt;-</string>
 			<key>name</key>
 			<string>keyword.operator.assignment.waxeye</string>
 		</dict>
 
+		<!-- 4.1 non-terminals -->
 		<dict>
 			<key>comment</key>
-			<string>non-tree constructing non-terminal</string>
+			<string>void non-terminal assignment</string>
 			<key>match</key>
 			<string>&lt;:</string>
 			<key>name</key>
 			<string>keyword.operator.assignment.waxeye</string>
 		</dict>
 
+		<!-- 4.4 pruning non-terminal -->
+		<dict>
+			<key>comment</key>
+			<string>pruning non-terminal assignment</string>
+			<key>match</key>
+			<string>&lt;=</string>
+			<key>name</key>
+			<string>keyword.operator.assignment.waxeye</string>
+		</dict>
+
 		<!-- 4.2 expressions -->
 
-		<!-- 4.2.1 atomic expressions -->
+		<!-- 4.2.1 atomic expressions - wildcard -->
 		<dict>
 			<key>comment</key>
 			<string>wildcard</string>
@@ -56,6 +71,7 @@
 			<string>keyword.operator.wildcard.waxeye</string>
 		</dict>
 
+		<!-- 4.2.1 atomic expressions - literal -->
 		<dict>
 			<key>comment</key>
 			<string>literal</string>
@@ -67,6 +83,7 @@
 			<string>string.quoted.single.waxeye</string>
 		</dict>
 
+		<!-- 4.2.1 atomic expressions - case-insensitive literal -->
 		<dict>
 			<key>comment</key>
 			<string>case-insensitive literal</string>
@@ -78,6 +95,7 @@
 			<string>string.quoted.double.waxeye</string>
 		</dict>
 
+		<!-- 4.2.1 atomic expressions - character class -->
 		<dict>
 			<key>comment</key>
 			<string>character class</string>
@@ -99,28 +117,19 @@
 			<string>keyword.operator.waxeye</string>
 		</dict>
 
-		<!-- 4.4 pruning non-terminal -->
-		<dict>
-			<key>comment</key>
-			<string>pruning non-terminal</string>
-			<key>match</key>
-			<string>&lt;\=</string>
-			<key>name</key>
-			<string>keyword.operator.assignment.waxeye</string>
-		</dict>
-
-		<!-- 4.5 comments -->
-                <dict>
-                        <key>comment</key>
-                        <string>single-line comment</string>
+		<!-- 4.5.1 single line comments -->
+    <dict>
+      <key>comment</key>
+      <string>single-line comment</string>
 			<key>match</key>
 			<string>(#).*$\n?</string>
 			<key>name</key>
 			<string>comment.line.number-sign.waxeye</string>
 		</dict>
 
-                <!-- FIXME: the multiline comment should be more greedy -->
-                <dict>
+		<!-- 4.5.2 multi line comments -->
+    <!-- FIXME: the multiline comment should be more greedy -->
+    <dict>
 			<key>comment</key>
 			<string>multi-line comment</string>
 			<key>begin</key>
