@@ -10,5 +10,4 @@ Waxeye
 
 Waxeye is a parser generator that's using PEGs: parser expression grammars.
 
-http://waxeye.org/
-
+See http://waxeye.org/ and https://github.com/orlandohill/waxeye .
