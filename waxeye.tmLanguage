@@ -128,19 +128,34 @@
     </dict>
 
     <!-- 4.5.2 multi line comments -->
-    <!-- FIXME: the multiline comment should be more greedy -->
     <dict>
       <key>comment</key>
       <string>multi-line comment</string>
+      <key>include</key>
+      <string>#multi_line_comment</string>
+    </dict>
+  </array>
+
+  <key>repository</key>
+  <dict>
+    <key>multi_line_comment</key>
+    <dict>
       <key>begin</key>
       <string>\/\*</string>
       <key>end</key>
       <string>\*\/</string>
       <key>name</key>
       <string>comment.block.waxeye</string>
+      <key>patterns</key>
+      <array>
+        <dict>
+          <key>include</key>
+          <!-- recurse to support nested comments -->
+          <string>#multi_line_comment</string>
+        </dict>
+      </array>
     </dict>
-
-  </array>
+  </dict>
 
   <key>scopeName</key>
   <string>source.waxeye</string>
