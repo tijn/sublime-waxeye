@@ -16,6 +16,72 @@
   <key>patterns</key>
   <array>
 
+    <dict>
+      <key>comment</key>
+      <string>tree constructing non-terminal assignment</string>
+      <key>match</key>
+      <string>([a-zA-Z][a-zA-Z0-9_-]*)[ \t]*(&lt;-)</string>
+      <key>name</key>
+      <string>meta.definition.waxeye</string>
+      <key>captures</key>
+      <dict>
+        <key>1</key>
+        <dict>
+          <key>name</key>
+          <string>entity.name.function.waxeye</string>
+        </dict>
+        <key>2</key>
+        <dict>
+          <key>name</key>
+          <string>keyword.operator.assignment.waxeye</string>
+        </dict>
+      </dict>
+    </dict>
+
+    <dict>
+      <key>comment</key>
+      <string>pruning non-terminal assignment</string>
+      <key>match</key>
+      <string>([a-zA-Z][a-zA-Z0-9_-]*)[ \t]*(&lt;=)</string>
+      <key>name</key>
+      <string>meta.definition.waxeye</string>
+      <key>captures</key>
+      <dict>
+        <key>1</key>
+        <dict>
+          <key>name</key>
+          <string>entity.name.function.waxeye</string>
+        </dict>
+        <key>2</key>
+        <dict>
+          <key>name</key>
+          <string>keyword.operator.assignment.waxeye</string>
+        </dict>
+      </dict>
+    </dict>
+
+    <dict>
+      <key>comment</key>
+      <string>void non-terminal assignment</string>
+      <key>match</key>
+      <string>([a-zA-Z][a-zA-Z0-9_-]*)[ \t]*(&lt;:)</string>
+      <key>name</key>
+      <string>meta.definition.waxeye</string>
+      <key>captures</key>
+      <dict>
+        <key>1</key>
+        <dict>
+          <key>name</key>
+          <string>entity.name.function.waxeye</string>
+        </dict>
+        <key>2</key>
+        <dict>
+          <key>name</key>
+          <string>keyword.operator.assignment.waxeye</string>
+        </dict>
+      </dict>
+    </dict>
+
     <!-- for the source of the references, see http://waxeye.org/manual.html -->
     <!-- 4.1 non-terminals -->
     <dict>
@@ -26,40 +92,6 @@
       <key>name</key>
       <string>variable.other.global.waxeye</string>
     </dict>
-
-    <!-- TODO: it would be cool if I could change the color of the name of the NT according to the assignment operator after it. And then keep the same color for that thing throughout the whole grammar file. I don't think a simple context free highlighter can do this though -->
-
-    <!-- 4.1 non-terminals -->
-    <dict>
-      <key>comment</key>
-      <string>tree constructing non-terminal assignment</string>
-      <key>match</key>
-      <string>&lt;-</string>
-      <key>name</key>
-      <string>keyword.operator.assignment.waxeye</string>
-    </dict>
-
-    <!-- 4.1 non-terminals -->
-    <dict>
-      <key>comment</key>
-      <string>void non-terminal assignment</string>
-      <key>match</key>
-      <string>&lt;:</string>
-      <key>name</key>
-      <string>keyword.operator.assignment.waxeye</string>
-    </dict>
-
-    <!-- 4.4 pruning non-terminal -->
-    <dict>
-      <key>comment</key>
-      <string>pruning non-terminal assignment</string>
-      <key>match</key>
-      <string>&lt;=</string>
-      <key>name</key>
-      <string>keyword.operator.assignment.waxeye</string>
-    </dict>
-
-    <!-- 4.2 expressions -->
 
     <!-- 4.2.1 atomic expressions - wildcard -->
     <dict>
